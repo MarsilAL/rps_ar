@@ -1,9 +1,214 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  font-family: "Helvetica Neue", sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #f3f1f1;
 }
 
+marquee {
+  text-align: center;
+  overflow: hidden;
+}
+
+.topNick {
+  text-shadow: 3px 2px 7px rgb(255, 255, 255), 2px 2px 7px rgb(255, 255, 255);
+  text-align: center;
+}
+.divWlc {
+  display: flex;
+  overflow: hidden;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  height: 330px;
+  width: 100%;
+}
+
+.PageTop {
+  width: 100%;
+  text-align: center;
+  height: 5%;
+  margin-top: -33px;
+  border-bottom-left-radius: 400px;
+  border-bottom-right-radius: 400px;
+  box-shadow: 0 8px 15px -4px rgb(32, 101, 165);
+  position: sticky;
+  top: 0px;
+  background-color: #fff;
+}
+
+/* Grid 1 Container */
+.grid1-container {
+  width: 100%;
+  height: 5%;
+  display: grid;
+  grid-template-columns: auto 0 0;
+
+  margin-top: -20px;
+}
+.grid1-item {
+  font-size: 30px;
+  width: 100%;
+  padding-left: 10px;
+  border-bottom: 1px solid;
+  border-bottom-color: #21f360;
+}
+
+/* Clear floats after the columns */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.topLogo {
+  font-size: 2.3em;
+  color: #fff;
+  letter-spacing: -7px;
+  font-weight: 500;
+  text-transform: uppercase;
+  animation: blur 0.75s ease-out infinite;
+  text-shadow: 1px 2px 5px rgb(175, 3, 3), 1px 0px 7px rgb(228, 5, 5);
+  padding-bottom: -8px;
+  margin-bottom: -8px;
+}
+
+/*Refresh button*/
+.RefBtn {
+  margin-left: -20px;
+  border-bottom-right-radius: 400px;
+  border-top-left-radius: 400px;
+  position: static;
+  border-color: #21f360;
+  color: #2196f3;
+  outline: none;
+}
+.TopMar {
+  font-size: 16px;
+  position: fixed;
+  left: 35px;
+  top: 40px;
+  color: #33667e;
+}
+
+/* Grid 2 Container */
+
+.grid2-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-template-rows: auto auto;
+
+  width: 100%;
+}
+.grid2-item {
+  background-color: rgba(255, 255, 255, 0.8);
+
+  /* border: 0.5px solid rgba(0, 0, 0, 0.8); */
+  font-size: 15px;
+  text-align: center;
+}
+.grid2-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 15px;
+}
+
+.g2i3 {
+  grid-area: 2 / 1 / span 2 / span 2;
+  height: 200px;
+  border-top: 2.5px ridge rgba(32, 101, 165);
+  border-bottom: 2.5px ridge rgba(32, 101, 165);
+}
+.GiftMar {
+  margin-top: 3px;
+}
+.g2i5 {
+  padding-top: 1px;
+}
+
+/**/
+.TitleRadio {
+  text-align: center;
+  height: 5%;
+  text-shadow: 1px 1px #ff0000;
+  color: white;
+  margin-top: -8px;
+  margin-left: -65px;
+}
+
+/*Slide*/
+
+#slider {
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev,
+a.control_next {
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover,
+a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  display: none;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+/***************/
 input {
   outline: none;
   font-size: 1rem;
@@ -32,7 +237,8 @@ button:hover {
 button.turn {
   color: rgb(255, 64, 129);
   background-color: white;
-  box-shadow: none;
+  height: 50px;
+  width: 80px;
 }
 
 button.turn:hover {
@@ -41,13 +247,13 @@ button.turn:hover {
 
 .rps-wrapper {
   background-color: rgb(255, 255, 255);
-  width: 90%;
-  height: 450px;
+  width: 100%;
+  height: 100%;
   max-height: 75%;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
-  border: 1px solid lightgrey;
+  border: 0px solid lightgrey;
 }
 
 #events {
@@ -55,8 +261,9 @@ button.turn:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid;
   overflow-y: scroll;
+  height: 175px;
 }
 
 #events .myClassName:last-child {
@@ -66,10 +273,12 @@ button.turn:hover {
 #events li {
   padding: 10px 10px 10px 10px;
   text-align-last: center;
+  color: white;
 }
 
 .chat-wrapper {
   padding: 10px;
+  width: 70%;
 }
 
 .chat-wrapper form {
@@ -80,15 +289,42 @@ button.turn:hover {
   font-size: 1rem;
   margin: 0 10px 0 0;
   padding: 0 5px;
-  flex-grow: 1;
+  flex-grow: 2;
 }
 
 .chat-wrapper form button {
-  width: 80px;
+  width: 25%;
 }
 
 .button-wrapper {
-  display: flex;
-  padding: 10px 50px;
-  justify-content: space-evenly;
+  display: inline-block;
+  padding: 10px 40px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/****TOButton***/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(32, 101, 165);
+}
+
+li {
+  float: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(77, 109, 170);
 }

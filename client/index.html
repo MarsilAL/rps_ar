@@ -1,28 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>RPS</title>
-    <link rel="stylesheet" href="style/main.css" />
-  </head>
-  <body>
-    <div class="rps-wrapper">
-      <ul id="events"></ul>
-      <div class="controls">
-        <div class="chat-wrapper">
-          <form id="chat-form">
-            <input id="chat" autocomplete="off" title="chat" />
-            <button id="say">Say</button>
-          </form>
-        </div>
+    <meta charset="utf-8" />
+    <title>SyrainTalk-Top-rps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./style/main.css" />
 
-        <div class="button-wrapper">
-          <button id="حجر" class="turn">حجر</button>
-          <button id="ورقة" class="turn">ورقة</button>
-          <button id="مقص" class="turn">مقص</button>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="alternate" href="http://www.syriantalk.org/" hreflang="ar-sy" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="keywords"
+      content="تحميل برنامج سيرياتوك ، تحميل سيرياتوك ، تحميل برنامج سيريا توك ، تحميل برنامج سيرياتك ، تحميل سيرياتك،تحميل سيريا تالك ،تحميل سيرياتالك ، برنامج ، تحميل ، تحميل برنامج سيرياتوك ، تحميل برنامج سيرياتالك ، تحميل برنامج  سيريا توك ، تحميل برنامج سيريا تالك ،  تحميل سيرياتوك ، تحميل سيرياتالك،syria talk، Syriatalk، تحميل سيرياتوك اورج ، تحميل برنامج سيرياتوك اورج ، تحميل برنامج سيرياتالك اورج ،تحميل برنامج سيريا مون ، تحميل برنامج سيريامون، تحميل جسمارت ،سيريان تالك,سيريانتالك,تعارف,شات,دردشة,سوريا,جابر,تالكونات,xmpp,jabber,syria,talk,سيريا,تالك,توك, sdvdhj,;,برنامج دردشة وتعارف,تعارف,بنات سوريا,تسليه,تحميل سيرياتوك القديم,تحميل سيرياتوك الحديث,تحميل سيرياتوك نوكيا,تحميل سيرياتوك جافا,تحميل سيرياتوك اندرويد،تحميل سيرياتوك سيمبيان,تحميل سيرياتوك اينفو,سيريا توك اينفو,سيرياتوك اينفو,تحميل سيرياتالك اينفو"
+    />
+    <meta
+      name="description"
+      content="تحميل برنامج سيرياتوك ، تحميل سيرياتوك ، تحميل برنامج سيريا توك ، تحميل برنامج سيرياتك ، تحميل سيرياتك،تحميل سيريا تالك ،تحميل سيرياتالك ، برنامج ، تحميل ، تحميل برنامج سيرياتوك ، تحميل برنامج سيرياتالك ، تحميل برنامج  سيريا توك ، تحميل برنامج سيريا تالك ،  تحميل سيرياتوك ، تحميل سيرياتالك،syria talk، Syriatalk، تحميل سيرياتوك اورج ، تحميل برنامج سيرياتوك اورج ، تحميل برنامج سيرياتالك اورج ،تحميل برنامج سيريا مون ، تحميل برنامج سيريامون، تحميل جسمارت ،سيريان تالك,سيريانتالك,تعارف,شات,دردشة,سوريا,جابر,تالكونات,xmpp,jabber,syria,talk,سيريا,تالك,توك, sdvdhj,;,برنامج دردشة وتعارف,تعارف,بنات سوريا,تسليه,تحميل سيرياتوك القديم,تحميل سيرياتوك الحديث,تحميل سيرياتوك نوكيا,تحميل سيرياتوك جافا,تحميل سيرياتوك اندرويد،تحميل سيرياتوك سيمبيان,تحميل سيرياتوك اينفو,سيريا توك اينفو,سيرياتوك اينفو,تحميل سيرياتالك اينفو"
+    />
+    <meta name="yandex-verification" content="179ffa8dade373d9" />
+    <meta name="msvalidate.01" content="B0699A0C8646FC145DE27102810B738A" />
+    <link rel="canonical" href="http://www.syriantalk.org/" />
+    <meta name="syriantalk" content="syriantalk" />
+    <meta
+      name="twitter:card"
+      content="تحميل برنامج سيرياتوك-سيرياتالك-Syriatalk"
+    />
+    <meta
+      property="og:type"
+      content="تحميل برنامج سيرياتالك-سيرياتوك|الموقع الرسمي"
+    />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-153214996-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-153214996-1");
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-153214996-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-153214996-1");
+    </script>
+
+  </head>
+
+  <body>
+    <div id="container" class="container">
+      <div class="column PageTop">
+        <h2
+          id="topLogo"
+          class="topLogo"
+          style="text-align: center; color: cornflowerblue"
+        >
+          Syria[ N ]Talk
+        </h2>
+      </div>
+      <div class="column grid1-container">
+        <div class="grid1-item">
+          <form>
+            <input
+              class="RefBtn"
+              type="button"
+              onClick="history.go(0)"
+              value="تحديث"
+            />
+          </form>
+          <marquee
+            scrolldelay="200"
+            id="TopMar"
+            class="TopMar"
+            behavior=""
+            direction="right"
+          >
+            أهلأ بك في برنامج سيريانتالك .. للأستماع إلى راديو البرنامج يمكنك
+            عبر الدخول إلى أي غرفة دردشة و تشغيل الراديو من الشريط الجانبي
+            الأيمن لغرفة الدردشة
+          </marquee>
         </div>
       </div>
-    </div>
+      <center>
+        <h4 style="color: crimson">لعبة حجرة ورقة مقص</h4>
+      </center>
 
+      <ul>
+        <li>
+          <a class="active" href="http://top.syriantalk.org/index.html"
+            >الرئيسية</a
+          >
+        </li>
+      </ul>
+
+      <div class="colum grid2-container">
+        <div class="grid2-item g2i1"></div>
+
+        <div class="grid2-item g2i2"></div>
+        <div class="grid2-item g2i3">
+          <div class="divWlc">
+            <div class="rps-wrapper">
+              <ul id="events"></ul>
+              <div class="controls">
+                <div class="chat-wrapper"></div>
+                <div class="button-wrapper">
+                  <button id="حجر" class="turn">حجر</button>
+                  <button id="ورقة" class="turn">ورقة</button>
+                  <button id="مقص" class="turn">مقص</button>
+                </div>
+                <form id="chat-form">
+                  <input id="chat" autocomplete="off" title="chat" />
+                  <button id="say">ارسال</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid2-item g2i4"></div>
+        <div class="grid2-item g2i5"></div>
+      </div>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="src/client.js"></script>
   </body>

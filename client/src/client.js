@@ -32,7 +32,7 @@ const addButtenListners = () => {
 
 // *********************
 
-writeEvent("Welcome To AS RPS");
+writeEvent("Welcome Syria[N]Talk Games");
 
 const sock = io();
 sock.on("message", writeEvent);
