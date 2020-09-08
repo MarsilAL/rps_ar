@@ -78,7 +78,6 @@
 
       gtag("config", "UA-153214996-1");
     </script>
-
   </head>
 
   <body>
@@ -102,25 +101,14 @@
               value="تحديث"
             />
           </form>
-          <marquee
-            scrolldelay="200"
-            id="TopMar"
-            class="TopMar"
-            behavior=""
-            direction="right"
-          >
-            أهلأ بك في برنامج سيريانتالك .. للأستماع إلى راديو البرنامج يمكنك
-            عبر الدخول إلى أي غرفة دردشة و تشغيل الراديو من الشريط الجانبي
-            الأيمن لغرفة الدردشة
-          </marquee>
         </div>
       </div>
       <center>
         <h4 style="color: crimson">لعبة حجرة ورقة مقص</h4>
       </center>
 
-      <ul>
-        <li>
+      <ul id="topBTul">
+        <li id="topBTli">
           <a class="active" href="http://top.syriantalk.org/index.html"
             >الرئيسية</a
           >
@@ -138,13 +126,19 @@
               <div class="controls">
                 <div class="chat-wrapper"></div>
                 <div class="button-wrapper">
-                  <button id="حجر" class="turn">حجر</button>
-                  <button id="ورقة" class="turn">ورقة</button>
-                  <button id="مقص" class="turn">مقص</button>
+                  <button onclick="scrollToBottom()" id="حجر" class="turn">
+                    حجر
+                  </button>
+                  <button onclick="scrollToBottom()" id="ورقة" class="turn">
+                    ورقة
+                  </button>
+                  <button onclick="scrollToBottom()" id="مقص" class="turn">
+                    مقص
+                  </button>
                 </div>
                 <form id="chat-form">
                   <input id="chat" autocomplete="off" title="chat" />
-                  <button id="say">ارسال</button>
+                  <button onclick="scrollToBottom()" id="say">ارسال</button>
                 </form>
               </div>
             </div>
@@ -159,3 +153,9 @@
     <script src="src/client.js"></script>
   </body>
 </html>
+<script>
+  function scrollToBottom() {
+    const msgList = document.getElementById("events");
+    msgList.scrollTop = msgList.scrollHeight;
+  }
+</script>

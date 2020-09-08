@@ -44,7 +44,7 @@ class RpsGame {
       this._sendToPlayers("انتهت اللعبة   " + turns.join("  :  "));
       this._getGameResult();
       this._turns = [null, null];
-      this._sendToPlayers("جولة جديدة !!!!!!");
+      this._sendToPlayers("<p class= 'newgame'> جولة جديدة !!!!!! </p>");
     }
   }
 
